@@ -3,19 +3,24 @@ import UIKit
 class BooksViewController: UIViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Book>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Book>
+
     private lazy var dataSource = makeDataSouce()
     private var booksInCart: Set<UUID> = []
+    
     enum Section {
         case main
     }
+
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
+
     private var books: [Book]
     private var config = Configuration.default
+
     struct Configuration {
         let showAddButton: Bool
         static let `default` = Configuration(showAddButton: true)
@@ -87,7 +92,6 @@ class BooksViewController: UIViewController {
         } else {
             booksInCart.insert(book.id)
         }
-        print(booksInCart)
         return isInCart(book)
     }
 }
