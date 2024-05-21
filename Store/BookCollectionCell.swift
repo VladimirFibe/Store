@@ -108,5 +108,5 @@ final class BookCollectionCell: UICollectionViewCell {
 
 @available (iOS 17.0, *)
 #Preview {
-    ViewController()
+    BooksViewController(books: Book.books)
 }

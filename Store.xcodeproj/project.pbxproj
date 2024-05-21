@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		E856A1E12BFB8B3F00DD6533 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856A1E02BFB8B3F00DD6533 /* AppDelegate.swift */; };
 		E856A1E32BFB8B3F00DD6533 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856A1E22BFB8B3F00DD6533 /* SceneDelegate.swift */; };
-		E856A1E52BFB8B3F00DD6533 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856A1E42BFB8B3F00DD6533 /* ViewController.swift */; };
+		E856A1E52BFB8B3F00DD6533 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856A1E42BFB8B3F00DD6533 /* BooksViewController.swift */; };
 		E856A1EA2BFB8B4100DD6533 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E856A1E92BFB8B4100DD6533 /* Assets.xcassets */; };
 		E856A1ED2BFB8B4100DD6533 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E856A1EC2BFB8B4100DD6533 /* Base */; };
 		E856A1F52BFB8C9600DD6533 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856A1F42BFB8C9600DD6533 /* Book.swift */; };
 		E856A1F72BFB926700DD6533 /* BookCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856A1F62BFB926700DD6533 /* BookCollectionCell.swift */; };
+		E856A1F92BFC13F400DD6533 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856A1F82BFC13F400DD6533 /* CartViewController.swift */; };
+		E856A1FB2BFC17F900DD6533 /* CartPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856A1FA2BFC17F900DD6533 /* CartPanelView.swift */; };
+		E856A1FD2BFC28E000DD6533 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E856A1FC2BFC28E000DD6533 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E856A1DD2BFB8B3F00DD6533 /* Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Store.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E856A1E02BFB8B3F00DD6533 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E856A1E22BFB8B3F00DD6533 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E856A1E42BFB8B3F00DD6533 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E856A1E42BFB8B3F00DD6533 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		E856A1E92BFB8B4100DD6533 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E856A1EC2BFB8B4100DD6533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E856A1EE2BFB8B4100DD6533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E856A1F42BFB8C9600DD6533 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		E856A1F62BFB926700DD6533 /* BookCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionCell.swift; sourceTree = "<group>"; };
+		E856A1F82BFC13F400DD6533 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		E856A1FA2BFC17F900DD6533 /* CartPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPanelView.swift; sourceTree = "<group>"; };
+		E856A1FC2BFC28E000DD6533 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		E856A1FE2BFC311300DD6533 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E856A1FF2BFC313800DD6533 /* Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Login.png; sourceTree = "<group>"; };
+		E856A2002BFC313800DD6533 /* Chart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chart.png; sourceTree = "<group>"; };
+		E856A2012BFC313800DD6533 /* Books.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Books.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,10 @@
 		E856A1D42BFB8B3F00DD6533 = {
 			isa = PBXGroup;
 			children = (
+				E856A1FE2BFC311300DD6533 /* README.md */,
+				E856A2012BFC313800DD6533 /* Books.png */,
+				E856A2002BFC313800DD6533 /* Chart.png */,
+				E856A1FF2BFC313800DD6533 /* Login.png */,
 				E856A1DF2BFB8B3F00DD6533 /* Store */,
 				E856A1DE2BFB8B3F00DD6533 /* Products */,
 			);
@@ -60,8 +74,11 @@
 			children = (
 				E856A1E02BFB8B3F00DD6533 /* AppDelegate.swift */,
 				E856A1E22BFB8B3F00DD6533 /* SceneDelegate.swift */,
-				E856A1E42BFB8B3F00DD6533 /* ViewController.swift */,
+				E856A1E42BFB8B3F00DD6533 /* BooksViewController.swift */,
+				E856A1F82BFC13F400DD6533 /* CartViewController.swift */,
+				E856A1FC2BFC28E000DD6533 /* SignInViewController.swift */,
 				E856A1F62BFB926700DD6533 /* BookCollectionCell.swift */,
+				E856A1FA2BFC17F900DD6533 /* CartPanelView.swift */,
 				E856A1F42BFB8C9600DD6533 /* Book.swift */,
 				E856A1E92BFB8B4100DD6533 /* Assets.xcassets */,
 				E856A1EB2BFB8B4100DD6533 /* LaunchScreen.storyboard */,
@@ -141,9 +158,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E856A1F52BFB8C9600DD6533 /* Book.swift in Sources */,
-				E856A1E52BFB8B3F00DD6533 /* ViewController.swift in Sources */,
+				E856A1FB2BFC17F900DD6533 /* CartPanelView.swift in Sources */,
+				E856A1E52BFB8B3F00DD6533 /* BooksViewController.swift in Sources */,
 				E856A1F72BFB926700DD6533 /* BookCollectionCell.swift in Sources */,
+				E856A1FD2BFC28E000DD6533 /* SignInViewController.swift in Sources */,
 				E856A1E12BFB8B3F00DD6533 /* AppDelegate.swift in Sources */,
+				E856A1F92BFC13F400DD6533 /* CartViewController.swift in Sources */,
 				E856A1E32BFB8B3F00DD6533 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

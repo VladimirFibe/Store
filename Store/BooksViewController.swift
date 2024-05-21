@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class BooksViewController: UIViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<Section, Book>
     typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Book>
     private lazy var dataSource = makeDataSouce()
@@ -14,18 +14,55 @@ class ViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
-    private var books = Book.books
+    private var books: [Book]
     private var config = Configuration.default
     struct Configuration {
         let showAddButton: Bool
-
         static let `default` = Configuration(showAddButton: true)
     }
 
+    init(books: [Book], config: Configuration = .default) {
+        self.books = books
+        self.config = config
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setupCollectionView()
+        setupNavigationBar()
+    }
+
+    private func setupNavigationBar() {
+        navigationItem.title = "Books"
+        navigationItem.largeTitleDisplayMode = .automatic
+        navigationController?.navigationBar.prefersLargeTitles = true
+        let cartAction = UIAction { _ in
+            let controller = UINavigationController(rootViewController: CartViewController(books: self.books.filter { self.isInCart($0)}))
+            self.present(controller, animated: true)
+        }
+        let accountAction = UIAction { _ in
+            let controller = UINavigationController(rootViewController: SignInViewController())
+            self.present(controller, animated: true)
+        }
+        let cartButton = UIBarButtonItem(
+            title: "Cart",
+            image: UIImage(systemName: "cart"),
+            primaryAction: cartAction,
+            menu: nil
+        )
+        let accountButton = UIBarButtonItem(
+            title: "Sign-in",
+            image: UIImage(systemName: "person.crop.circle"),
+            primaryAction: accountAction,
+            menu: nil
+        )
+        navigationItem.rightBarButtonItems = [accountButton, cartButton]
     }
 
     private func setupCollectionView() {
@@ -55,7 +92,7 @@ class ViewController: UIViewController {
     }
 }
 // MARK: - DataSource Implementation
-extension ViewController {
+extension BooksViewController {
     func applySnapshot(animatingDifferences: Bool = true) {
         var snapshot = Snapshot()
         snapshot.appendSections([.main])
@@ -79,7 +116,7 @@ extension ViewController {
     }
 }
 // MARK: - Layout Implementation
-extension ViewController {
+extension BooksViewController {
     func makeLayout() -> UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout { _, _ in
             let size = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(160))
@@ -94,5 +131,5 @@ extension ViewController {
 
 @available (iOS 17.0, *)
 #Preview {
-    ViewController()
+    BooksViewController(books: Book.books)
 }
